@@ -1,0 +1,44 @@
+
+
+<div class="container-fluid">
+
+<h2>Dainos</h2>
+<table class="table text-center songs-table">
+  <thead>
+    <tr>
+      <th scope="col">Dainos id</th>
+      <th scope="col">Dainos pavadinimas</th>
+      <th scope="col">Dainos albumas</th>
+      <th>    <a class="btn btn-warning mt-3" href="/new">Pridėti daina</a>
+      <th></th>
+</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each songs}}
+    <tr>
+      
+      <td>{{id}}</td>
+      <td> {{song_Name}}</td>
+      <td>{{song_album}}</td>
+
+      {{!-- {{#if cookie}} --}}
+      <td>
+         <a class="btn  btn-danger" href="/delete/{{id}}">Ištrinti</a>
+         <a class="btn btn-success" href="/edit/{{id}}">Redaguoti</a>
+      
+      </td>
+      {{!-- {{/if}} --}}
+      
+     
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+</div>
+
+
+    
+    
